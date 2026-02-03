@@ -1,0 +1,11 @@
+# --- Modernization Target (Attack) ---
+numpy
+numba
+llvmlite
+scikit-learn
+scipy
+pandas
+matplotlib
+tqdm
+slicer
+cloudpickle
