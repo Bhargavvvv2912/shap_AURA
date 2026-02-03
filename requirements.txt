@@ -1,11 +1,25 @@
-# --- SHAP Baseline (CI-Validated Stack) ---
-numpy==2.1.3
-numba==0.61.0
+-e git+https://github.com/Bhargavvvv2912/shap_AURA@e8d9ee1e0724920aa4e3e9b03472fcefaae4d9d7#egg=shap
+cloudpickle==3.1.1
+contourpy==1.3.3
+cycler==0.12.1
+fonttools==4.61.1
+joblib==1.5.3
+kiwisolver==1.4.9
 llvmlite==0.44.0
+matplotlib==3.10.1
+numba==0.61.0
+numpy==2.1.3
+packaging==26.0
+pandas==2.2.3
+pillow==12.1.0
+pyparsing==3.3.2
+python-dateutil==2.9.0.post0
+pytz==2025.2
 scikit-learn==1.6.1
 scipy==1.15.2
-pandas==2.2.3
-matplotlib==3.10.1
-tqdm==4.67.1
+six==1.17.0
 slicer==0.0.8
-cloudpickle==3.1.1
+threadpoolctl==3.6.0
+tqdm==4.67.1
+typing_extensions==4.15.0
+tzdata==2025.3
