@@ -24,21 +24,19 @@ jobs:
       - name: 🧪 1. Run Pip Baseline
         run: |
           python -m venv baseline_env
-          source baseline_env/bin/activate
-          pip install -r requirements.txt
-          python validation_shap.py
-          deactivate
+          ./baseline_env/bin/pip install -r requirements.txt
+          # THIS IS THE MISSING PIECE:
+          ./baseline_env/bin/pip install -e . 
+          ./baseline_env/bin/python validation_shap.py
 
       - name: 💥 2. Run Pip Upgrade
         continue-on-error: true
         run: |
           python -m venv upgrade_env
-          source upgrade_env/bin/activate
-          # The 'Attack': Pip will grab torchtext 0.18+ which deletes the classes
-          pip install --upgrade -r primary_requirements.txt
-          python validation_shap.py
-          deactivate
-
+          ./upgrade_env/bin/pip install --upgrade -r primary_requirements.txt
+          # AND HERE TOO:
+          ./upgrade_env/bin/pip install -e .
+          ./upgrade_env/bin/python validation_shap.py
       - name: 🤖 Run AURA Agent
         run: |
           # Use the -u flag in the shell command to ensure unbuffered output.
